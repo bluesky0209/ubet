@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0
+  }
+
+  50% {
+    background-position: 400% 0
+  }
+
+  100% {
+    background-position: 0 0
+  }
+}
+
+.type-item:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(3px);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px
+}
+
+.type-item.selected:after {
+  background: linear-gradient(0deg, #ff000060, #020202b8, #ff000060)
+}
+
+.type-item:before {
+  opacity: 1
+}
+
+.type-item:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0e151b;
+  left: 0;
+  top: 0;
+  border-radius: 10px
+}
+
+@media screen and (max-width: 640px) {
+  .game-list-container .game {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .game-list-container .game {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .game-list-container .game {
+    width: 25%;
+  }
+}
