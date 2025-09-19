@@ -21,6 +21,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfcfcf #fff;
+}
 
 .type-item:before {
   content: '';
