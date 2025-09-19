@@ -26,6 +26,31 @@ body {
   scrollbar-color: #cfcfcf #fff;
 }
 
+@keyframes glowing {
+  0% {
+    background-position: 0 0
+  }
+
+  50% {
+    background-position: 400% 0
+  }
+
+  100% {
+    background-position: 0 0
+  }
+}
+
+.type-item.selected {
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  background: #f5f5f5;
+  line-height: 43px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .type-item:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -61,4 +86,21 @@ body {
   left: 0;
   top: 0;
   border-radius: 10px
+}
+
+
+svg:not(:root).svg-inline--fa {
+  overflow: visible;
+}
+
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
 }

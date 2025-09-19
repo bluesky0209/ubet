@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const slides = [
-    { src: "/killer88.png", style: { height: '230px', width: '100%' } },
-    { src: "/bc1.gif", style: { height: '230px', width: '100%' } },
-    { src: "/blc1.gif", style: { height: '230px', width: '100%' } },
-    { src: "/slotcas.gif", style: { height: '230px', width: '100%' } }
+    { src: "/killer88.png" },
+    { src: "/bc1.gif" },
+    { src: "/blc1.gif" },
+    { src: "/slotcas.gif" }
 ];
 
 const Slides = () => {
@@ -34,8 +34,7 @@ const Slides = () => {
                     >
                         <img
                             src={slide.src}
-                            className="w-full h-full "
-                            style={slide.style}
+                            className={`w-full h-full max-[699px]:min-[280px]:h-[120px] h-[230px] w-full`}
                             alt={`Slide ${index + 1}`}
                         />
                     </div>
