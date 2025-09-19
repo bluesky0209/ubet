@@ -1,14 +1,15 @@
 import { useState } from "react";
 
+const providers = [
+    'betconstruct slots', 'betsoft', 'bgaming', 'caleta', 'dragon gaming',
+    'evolution', 'evoplay', 'expanse', 'gameart', 'habanero',
+    'isoftbet', 'kiron', 'mascot', 'pg soft', 'pragmatic play',
+    'qora', 'reevo', 'smartsoft', 'spinomenal', 'swintt',
+    'tomhorn', 'triple pg', 'upgaming'
+];
+
 const Provider = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const providers = [
-        'betconstruct slots', 'betsoft', 'bgaming', 'caleta', 'dragon gaming',
-        'evolution', 'evoplay', 'expanse', 'gameart', 'habanero',
-        'isoftbet', 'kiron', 'mascot', 'pg soft', 'pragmatic play',
-        'qora', 'reevo', 'smartsoft', 'spinomenal', 'swintt',
-        'tomhorn', 'triple pg', 'upgaming'
-    ];
 
     return (
         <div className="p-[20px] px-[10px] pb-[5px]">

@@ -21,19 +21,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@keyframes glowing {
-  0% {
-    background-position: 0 0
-  }
-
-  50% {
-    background-position: 400% 0
-  }
-
-  100% {
-    background-position: 0 0
-  }
-}
 
 .type-item:before {
   content: '';
@@ -70,22 +57,4 @@ body {
   left: 0;
   top: 0;
   border-radius: 10px
-}
-
-@media screen and (max-width: 640px) {
-  .game-list-container .game {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 860px) {
-  .game-list-container .game {
-    width: 33%;
-  }
-}
-
-@media screen and (max-width: 1120px) {
-  .game-list-container .game {
-    width: 25%;
-  }
 }
