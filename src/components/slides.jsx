@@ -43,7 +43,7 @@ const Slides = () => {
                     >
                         <img
                             src={slide.src}
-                            className="w-full h-full object-cover object-center"
+                            className="w-full h-full "
                             style={slide.style}
                             alt={`Slide ${index + 1}`}
                         />

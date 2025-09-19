@@ -60,7 +60,7 @@ const GameList = () => {
         <div className="p-[2px] grid grid-cols-2 gap-4 pl-[15px] pr-[15px] md:grid-cols-5 sm:grid-cols-3 xs:grid-cols-2">
             {games.map((game) => (
                 <div className="game h-[286px] p-[10px] rounded-[10px] cursor-pointer flex flex-col transition-all duration-300 ease hover:shadow-[0_0_10px_#fff,_0_0_10px_#eaeaea,_0_0_10px_#fff] hover:p-0 group" key={game.id}>
-                    <div className="order-2 border-[#1a7051] border-t-0 rounded-b-[10px] w-full relative flex-grow h-[calc(100%-30px)] border border-[rgba(254,186,0,0.3)]">
+                    <div className="order-2 border-[#1a7051] border-t-0 rounded-b-[10px] w-full relative flex-grow h-[calc(100%-30px)] border border-[rgba(254,186,0,0.3)] group-hover:border-[3px]">
                         <div className="absolute w-full h-full bg-[rgba(0,0,0,0.7)] transition-all duration-150 ease-in-out opacity-0 flex items-center justify-center flex-col hover:opacity-100">
                             <div className="action rounded-[4px] font-normal border border-[#1a7051] text-[12px] leading-[24px] bg-[#e00015] text-white w-[100px] text-center h-[30px] m-[5px]">Play Fun</div>
                         </div>
@@ -70,7 +70,7 @@ const GameList = () => {
                         <img
                             src={game.image}
                             alt={game.name}
-                            className="rounded-b-[10px] h-full w-full object-cover transition-transform duration-150"
+                            className="rounded-b-[10px] h-full w-full object-cover transition-transform duration-150 group-hover:scale-[1.02]"
                             loading="lazy"
                         />
                     </div>
