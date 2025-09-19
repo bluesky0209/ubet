@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const providers = [
-    'betconstruct slots', 'betsoft', 'bgaming', 'caleta', 'dragon gaming',
+    'betsoft', 'bgaming', 'caleta',
     'evolution', 'evoplay', 'expanse', 'gameart', 'habanero',
-    'isoftbet', 'kiron', 'mascot', 'pg soft', 'pragmatic play',
+    'isoftbet', 'kiron', 'mascot',
     'qora', 'reevo', 'smartsoft', 'spinomenal', 'swintt',
-    'tomhorn', 'triple pg', 'upgaming'
+    'tomhorn', 'upgaming'
 ];
 
 const Provider = () => {
@@ -25,7 +25,7 @@ const Provider = () => {
                     </svg>
                 </span>
                 <span
-                    className="absolute bg-red-500 text-white rounded-l-[10px] top-[-9px] px-[18px] text-[13px] leading-[18px] h-[20px] right-0 cursor-pointer"
+                    className="absolute bg-[#ff0000] text-white rounded-l-[10px] top-[-9px] px-[18px] text-[13px] leading-[18px] h-[20px] right-0 cursor-pointer"
                     onClick={() => setIsOpen(false)}
                 >
                     Clear
@@ -35,7 +35,7 @@ const Provider = () => {
                 {providers.map((provider) => (
                     <div
                         key={provider}
-                        className="text-[14px] font-medium capitalize rounded-[20px] w-[10%] min-w-[150px] text-center m-[7px] h-[40px] leading-[36px] bg-[#0e151b] text-white border-2 border-[#1a7051] shadow-[0_0_7px_#31dea0] px-[7px] cursor-pointer"
+                        className="text-[14px] font-medium capitalize rounded-[15px] md:rounded-[20px] w-[10%] md:min-w-[150px] min-w-[110px] text-center m-[7px] h-[30px] md:h-[40px] leading-[28px] md:leading-[36px] bg-[#293043] md:bg-[#0e151b] text-[#bbb] md:text-white border-none md:border-2 md:border-[#1a7051] shadow-[0_0_7px_#31dea0] px-[7px] cursor-pointer"
                     >
                         <span>{provider}</span>
                     </div>

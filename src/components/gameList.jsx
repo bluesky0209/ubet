@@ -4,9 +4,9 @@ import { gameslist } from '../data/temp'
 const GameList = () => {
 
     return (
-        <div className="grid grid-cols-2 gap-2 p-[2px] pl-[15px] pr-[15px] md:grid-cols-5 sm:grid-cols-3 xs:grid-cols-2">
+        <div className="grid grid-cols-2 p-[2px] pl-[15px] pr-[15px] md:grid-cols-5 sm:grid-cols-3 xs:grid-cols-2">
             {gameslist?.map((game) => (
-                <div key={game.id} className="flex flex-col group h-[286px] p-[10px] rounded-[10px] cursor-pointer hover:shadow-[0_0_10px_#fff,_0_0_10px_#eaeaea,_0_0_10px_#fff] hover:p-0 " >
+                <div key={game.id} className="flex flex-col group md:h-[286px] h-[170px] md:p-[10px] p-[7px] rounded-[10px] cursor-pointer hover:shadow-[0_0_10px_#fff,_0_0_10px_#eaeaea,_0_0_10px_#fff] hover:p-0 " >
                     <div className="order-1 leading-[35px] text-center text-[#bbb] text-[14px] text-ellipsis whitespace-nowrap px-[10px] py-0   overflow-hidden bg-[#171c2c] rounded-t-[10px] border border-[#1a7051] border-b-0  min-h-[40px] h-[30px] group-hover:bg-[#1a7051] group-hover:text-white transition-colors duration-150">{game.name}</div>
                     <div className="order-2 border-[#1a7051] border-t-0 rounded-b-[10px] w-full relative flex-grow h-[calc(100%-30px)] border border-[rgba(254,186,0,0.3)] group-hover:border-[3px]">
                         <div className="absolute w-full h-full transition-all duration-150 ease-in-out opacity-0 flex items-center justify-center flex-col group-hover:opacity-100 z-10">

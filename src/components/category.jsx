@@ -28,9 +28,9 @@ const Category = () => {
     return (
         <div className="p-0 h-[50px] max-h-[50px] mt-[10px] min-h-[55px] w-full flex flex-row">
             <div className="relative text-[#dfdfdf] p-0 w-full flex flex-grow flex-row overflow-x-auto overflow-y-hidden">
-                <div className="search" style={{ color: '#1a7051', padding: '0 5px', borderRight: '0 solid #172b3e', height: '45px', lineHeight: '43px', textAlign: 'center', cursor: 'pointer' }}>
+                <div className="text-[#1a7051] px-[5px] mr-[15px] border-r-0 border-r-solid border-r-[#172b3e] w-[44px] h-[35px] leading-[33px] md:h-[45px] md:leading-[43px] text-center cursor-pointer">
                     <div>
-                        <SearchIcon />
+                        <SearchIcon className="h-[33px] md:h-[43px] p-[8px] md:p-[10px] w-[40px] md:w-[44px]" />
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@ const Category = () => {
                     <div
                         key={category.id}
                         id={category.id !== 'favorites' ? category.id : undefined}
-                        className={`type-item ${selectedCategory === category.id ? 'selected' : ''} flex relative z-0 no-underline items-center justify-center gap-[5px] bg-[#212531] text-[#bbb] mr-[17px] border border-[#0e151b] text-center h-[45px] leading-[43px] min-w-[11%] cursor-pointer rounded-[10px] p-0 text-decoration-none whitespace-nowrap
+                        className={`type-item ${selectedCategory === category.id ? 'selected' : ''} flex relative z-0 no-underline items-center justify-center gap-[5px] bg-[#212531] text-[#bbb] md:ml-[17px] ml-[10px] border border-[#0e151b] text-center md:h-[45px] h-[35px] leading-[33px] md:leading-[43px] min-w-[100px] md:min-w-[11%] cursor-pointer rounded-[10px] p-0 text-decoration-none whitespace-nowrap
                             w-[${category.width || '25%'}]
                             ${selectedCategory === category.id ? 'uppercase text-[14px] font-[400]' : 'capitalize text-[13px] font-[500]'}`}
                         onClick={() => handleCategorySelect(category.id)}
